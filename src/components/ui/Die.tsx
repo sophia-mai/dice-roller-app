@@ -7,8 +7,11 @@ const dotPositions: Record<number, number[]> = {
   6: [0, 2, 3, 5, 6, 8],
 };
 
-function Die() {
-  const value = 5;
+interface DieProps {
+  value: number;
+}
+
+function Die({ value }: DieProps) {
   const dots = dotPositions[value] ?? [];
 
   return (
